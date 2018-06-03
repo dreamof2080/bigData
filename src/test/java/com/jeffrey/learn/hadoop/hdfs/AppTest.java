@@ -18,8 +18,10 @@ public class AppTest
     public void shouldAnswerWithTrue()
     {
         try {
+            System.setProperty("hadoop.home.dir", "D:\\hadoop-3.1.0");
             HDFSApp hdfsApp = new HDFSApp();
-            hdfsApp.cat();
+            hdfsApp.delete();
+            hdfsApp.tearDown();
         } catch (Exception e) {
             e.printStackTrace();
         }
